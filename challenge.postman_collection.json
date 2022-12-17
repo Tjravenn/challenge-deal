@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "cddcb10b-8efd-491e-bb2a-e8eec635bf6d",
+		"name": "challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23426245"
+	},
+	"item": [
+		{
+			"name": "POST USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOWRhMzRjZDI1ZDZiZjk3MDI1Njc5MSIsInVzZXJuYW1lIjoidGVzdDEyMyIsInJvbGUiOjIsImlhdCI6MTY3MTI3NTM2MywiZXhwIjoxNjcxMzAwNTYzfQ.3VObOy3nM4p9csD3F-Uxkaz79n33MT5FuKX5O1z1R-o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test123\",\n    \"password\": \"123456\",\n    \"role\" : 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOWRhMzRjZDI1ZDZiZjk3MDI1Njc5MSIsInVzZXJuYW1lIjoidGVzdDEyMyIsInJvbGUiOjIsImlhdCI6MTY3MTI3NTM2MywiZXhwIjoxNjcxMzAwNTYzfQ.3VObOy3nM4p9csD3F-Uxkaz79n33MT5FuKX5O1z1R-o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT USERS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOWRhMzRjZDI1ZDZiZjk3MDI1Njc5MSIsInVzZXJuYW1lIjoidGVzdDEyMyIsInJvbGUiOjIsImlhdCI6MTY3MTI3NTM2MywiZXhwIjoxNjcxMzAwNTYzfQ.3VObOy3nM4p9csD3F-Uxkaz79n33MT5FuKX5O1z1R-o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"RavenBerhasilUpdate\",\n    \"role\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/639d757313b2fbad59ef2c25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"639d757313b2fbad59ef2c25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOWRhMzRjZDI1ZDZiZjk3MDI1Njc5MSIsInVzZXJuYW1lIjoidGVzdDEyMyIsInJvbGUiOjIsImlhdCI6MTY3MTI3NTM2MywiZXhwIjoxNjcxMzAwNTYzfQ.3VObOy3nM4p9csD3F-Uxkaz79n33MT5FuKX5O1z1R-o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/639d809d88d1038440eb10c7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"639d809d88d1038440eb10c7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test123\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
