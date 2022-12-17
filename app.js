@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 
 const port = process.env.PORT || 3000;
 const cors = require("cors");
+const initializeUser = require("./helpers/initialize-user");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
