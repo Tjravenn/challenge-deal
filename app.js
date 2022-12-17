@@ -16,7 +16,8 @@ app.use("/", router);
 
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => {
+  .then(() => { 
+    initializeUser()
     console.log("Challenge is connected to mongo db");
   })
   .catch((err) => console.log("Error connect mongo db"));

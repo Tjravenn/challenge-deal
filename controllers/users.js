@@ -62,21 +62,27 @@ exports.getAllUser = async (req, res, next) => {
 
 exports.updateUser = async (req, res, next) => {
   try {
+    // 1) Validasi ID / Request
     const id = req.params.id;
     if (!id) throw new Error("Bad request");
 
+    // 2) Cek User ke DataBase
     const user = await User.findById(id);
     if (!user) throw new Error("Bad request");
 
+    // 3) Cek Password Dan Konfirmasi Password
     if (req.body.password || req.body.confirmation_password || (req.body.password && req.body.confirmation_password)) {
       if (req.body.password != req.body.confirmation_password) throw new Error("Password and Confirmation password not match");
     }
 
+    // 4) Update Data User
     user.username = req.body.username || user.username;
     user.password = req.body.password ? await hashPass(req.body.password) : user.password;
     user.role = req.body.role || user.role;
 
     await user.save();
+
+    // 5) Response
 
     res.send({
       status: true,
